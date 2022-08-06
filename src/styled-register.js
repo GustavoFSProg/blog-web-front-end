@@ -28,7 +28,9 @@ export const DivListagemProdutos = styled.div`
   }
 `
 export const ProductContainer = styled.div`
-  background: #cce6ff;
+  /* background: #cce6ff; */
+    background: #e6e6e6;
+
   margin-left: 20px;
   border-radius: 15px;
   width: 500px;
@@ -42,10 +44,10 @@ export const Input = styled.input`
   /* background: red; */
   border-radius: 8px;
   height: 45px;
-  width: 90%;
+  width: 100%;
   margin-bottom: 10px;
   margin-top: 5px;
-  border: 1px solid #0069cc;
+  border: 1px solid #a6a6a6;
 `
 export const FormContainer = styled.div`
   display: flex;
@@ -55,11 +57,16 @@ export const FormContainer = styled.div`
   padding-right: 20px;
 `
 export const Label = styled.label`
-  margin-left: -350px;
+  /* margin-left: -350px; */
   font-family: 'Roboto';
-  font-size: 15px;
-  color: #0069cc;
+   display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  font-size: 16px;
+  color: #004d4d;
   margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 3px;
 `
 
 export const InputFile = styled.input`

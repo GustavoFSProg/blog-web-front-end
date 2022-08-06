@@ -15,10 +15,8 @@ import { useEffect, useState } from 'react'
 
 const token = localStorage.getItem('Token')
 
-
 function Register() {
   const [post, setPosts] = useState([])
-
 
   const [title, setTitle] = useState('')
   const [autor, setAutor] = useState('')
@@ -53,7 +51,7 @@ function Register() {
           <ProductContainer>
             <div
               style={{
-                color: '#0059b3',
+                color: '#004d4d',
                 fontFamily: 'Roboto',
                 display: 'flex',
                 justifyContent: 'center',
@@ -71,29 +69,52 @@ function Register() {
                   className="botao-imagem"
                   onChange={(e) => setImage(e.target.files[0])}
                 />
+                <div style={{
+                  display: 'flex', flexDirection: 'column',
+                  width: '100%',
+                  justifyContent: 'left'
+                }}>
+
                 <Label>Titulo do Post: </Label>
                 <Input id="title" value={title} onChange={(e) => setTitle(e.target.value)} />
-
+                </div>
+                <div style={{
+                  display: 'flex', flexDirection: 'column',
+                  width: '100%',
+                  justifyContent: 'left'
+                }}>
                 <Label>Texto: </Label>
                 <textarea
                   rows="22"
-                  cols="52"
+                    cols="49"
                   id="text"
                   value={text}
                   onChange={(e) => setText(e.target.value)}
-                />
+                    style={{
+                      borderRadius: '8px',
+                      border: '1px solid #a6a6a6',
+                    }}
+                  />
+                </div>
                 <br />
+                <div style={{
+                  display: 'flex', flexDirection: 'column',
+                  width: '100%',
+                  justifyContent: 'left'
+                }}>
 
                 <Label>Autor: </Label>
-                <Input id="autor" value={autor} onChange={(e) => setAutor(e.target.value)} />
+                  <Input id="autor" value={autor} onChange={(e) => setAutor(e.target.value)} />
+                </div>
+
                 <br />
                 {token ? (
                   <Button className="confirm-Button" type="submit">
-                  Cadastrar
+                    Cadastrar
                   </Button>
                 ) : (
                   <h2>Unautorized!!!</h2>
-                )} 
+                )}
                 <br />
                 <br />
               </FormContainer>
