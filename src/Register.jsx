@@ -13,8 +13,12 @@ import {
 } from './styled-register'
 import { useEffect, useState } from 'react'
 
+const token = localStorage.getItem('Token')
+
+
 function Register() {
   const [post, setPosts] = useState([])
+
 
   const [title, setTitle] = useState('')
   const [autor, setAutor] = useState('')
@@ -83,13 +87,13 @@ function Register() {
                 <Label>Autor: </Label>
                 <Input id="autor" value={autor} onChange={(e) => setAutor(e.target.value)} />
                 <br />
-                {/* {token ? ( */}
-                {/* <Button  className="confirm-Button" type="submit">
+                {token ? (
+                  <Button className="confirm-Button" type="submit">
                   Cadastrar
-                </Button> */}
-                {/* ) : (
+                  </Button>
+                ) : (
                   <h2>Unautorized!!!</h2>
-                )} */}
+                )} 
                 <br />
                 <br />
               </FormContainer>
