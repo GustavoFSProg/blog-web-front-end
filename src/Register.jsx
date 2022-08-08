@@ -62,13 +62,26 @@ function Register() {
               <h1>Cadastrar Post</h1>
             </div>
             <br />
-            <form onSubmit={handleSubmit}>
+            <div
+              style={{
+                color: '#004d4d',
+                fontFamily: 'Roboto',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: '100%',
+
+              }}
+            >
               <FormContainer>
+                <form onSubmit={handleSubmit}>
+
                 <div style={{
                   display: 'flex', flexDirection: 'column',
                   width: '100%',
                   justifyContent: 'left'
                 }}>
+
                   <Label>Imagem: </Label>
 
                 <InputFile
@@ -133,9 +146,14 @@ function Register() {
                 </div>
 
                 <br />
+
                 <br />
+                </form>
               </FormContainer>
-            </form>
+
+            </div>
+
+
           </ProductContainer>
         </DivListagemProdutos>
       </Container>

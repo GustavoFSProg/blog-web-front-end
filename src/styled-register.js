@@ -38,7 +38,7 @@ export const ProductContainer = styled.div`
 
   margin-left: 20px;
   border-radius: 15px;
-  width: 40%;
+  width: 100%;
 
   @media screen and (max-width: 900px) {
     margin-top: 20px;
@@ -49,24 +49,28 @@ export const Input = styled.input`
   background: #ffffe6;
   border-radius: 8px;
   height: 38px;
-  max-width: 92%;
   margin-bottom: 10px;
   margin-top: 5px;
   border: 1px solid #a6a6a6;
-  width: 91%;
+  width: 30rem;
 
   @media screen and (max-width: 900px) {
-    margin-left: -14px;
-    width: 90%;
+    /* margin-left: -14px; */
+      width: 18rem;
+
   }
 `
 export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
-  width: 100%;
+  width: 50vw;
+
+  /* background: green; */
+
 `
 export const Label = styled.label`
   /* margin-left: -350px; */
@@ -104,12 +108,14 @@ export const Button = styled.button`
 export const TextArea = styled.textarea`
   display: flex;
   align-items: center;
-  width: 90%;
+  width: 80%;
   background: #ffffe6;
+  width: 30rem;
+
 
 
   @media screen and (max-width: 900px) {
-    width: 88%;
-    margin-left: -13px;
+      width: 18rem;
+
   }
 `
