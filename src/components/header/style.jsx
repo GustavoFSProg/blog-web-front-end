@@ -50,7 +50,8 @@ export const LinksContainer = styled.div`
   justify-content: space-around;
 
   @media screen and (max-width: 800px) {
-    display: none;
+    /* display: none; */
+    /* width: 20px; */
   }
 `
 export const Input = styled.input`
