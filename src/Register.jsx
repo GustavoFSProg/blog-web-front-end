@@ -10,6 +10,7 @@ import {
   Label,
   InputFile,
   Button,
+  TextArea
 } from './styled-register'
 import { useEffect, useState } from 'react'
 
@@ -63,12 +64,20 @@ function Register() {
             <br />
             <form onSubmit={handleSubmit}>
               <FormContainer>
+                <div style={{
+                  display: 'flex', flexDirection: 'column',
+                  width: '100%',
+                  justifyContent: 'left'
+                }}>
+                  <Label>Imagem: </Label>
+
                 <InputFile
                   type="file"
                   id="image"
                   className="botao-imagem"
                   onChange={(e) => setImage(e.target.files[0])}
-                />
+                  />
+                </ div>
                 <div style={{
                   display: 'flex', flexDirection: 'column',
                   width: '100%',
@@ -80,19 +89,23 @@ function Register() {
                 </div>
                 <div style={{
                   display: 'flex', flexDirection: 'column',
+                  // width: '92%',
+                  justifyContent: 'left',
+                  marginLeft: '4px',
                   width: '100%',
-                  justifyContent: 'left'
+
                 }}>
                 <Label>Texto: </Label>
-                <textarea
+                  <TextArea
                   rows="22"
-                    cols="49"
+                    // cols="63"
                   id="text"
                   value={text}
                   onChange={(e) => setText(e.target.value)}
                     style={{
                       borderRadius: '8px',
                       border: '1px solid #a6a6a6',
+
                     }}
                   />
                 </div>
@@ -108,13 +121,17 @@ function Register() {
                 </div>
 
                 <br />
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+
                 {token ? (
                   <Button className="confirm-Button" type="submit">
                     Cadastrar
                   </Button>
                 ) : (
                   <h2>Unautorized!!!</h2>
-                )}
+                  )}
+                </div>
+
                 <br />
                 <br />
               </FormContainer>
