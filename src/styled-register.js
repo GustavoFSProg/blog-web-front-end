@@ -29,6 +29,8 @@ export const DivListagemProdutos = styled.div`
     flex-direction: column;
     margin-top: 10px;
     margin-left: -32px;
+  width: 00%;
+
   }
 `
 export const ProductContainer = styled.div`
@@ -42,7 +44,7 @@ export const ProductContainer = styled.div`
 
   @media screen and (max-width: 900px) {
     margin-top: 20px;
-    width: 90%;
+    width: 98%;
   }
 `
 export const Input = styled.input`
@@ -70,6 +72,13 @@ export const FormContainer = styled.div`
   width: 50vw;
 
   /* background: green; */
+
+
+  @media screen and (max-width: 900px) {
+    /* margin-left: -114px; */
+      width: 17rem;
+
+  }
 
 `
 export const Label = styled.label`
@@ -119,3 +128,21 @@ export const TextArea = styled.textarea`
 
   }
 `
+
+export const ListContainer = styled.div`
+  color: #004d4d;
+  font-family: Roboto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* background: blue; */
+
+
+
+  @media screen and (max-width: 900px) {
+      width: 80%;
+
+  }
+`
+  

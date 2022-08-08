@@ -10,7 +10,8 @@ import {
   Label,
   InputFile,
   Button,
-  TextArea
+  TextArea,
+  ListContainer
 } from './styled-register'
 import { useEffect, useState } from 'react'
 
@@ -50,21 +51,15 @@ function Register() {
       <Container>
         <DivListagemProdutos>
           <ProductContainer>
-            <div
-              style={{
-                color: '#004d4d',
-                fontFamily: 'Roboto',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
+            <ListContainer
+
             >
-              <h1>Cadastrar Post</h1>
-            </div>
+              <h1>Cadastro</h1>
+            </ListContainer>
             <br />
             <div
               style={{
-                color: '#004d4d',
+                // background: 'yellow',
                 fontFamily: 'Roboto',
                 display: 'flex',
                 justifyContent: 'center',
@@ -78,8 +73,10 @@ function Register() {
 
                 <div style={{
                   display: 'flex', flexDirection: 'column',
-                  width: '100%',
-                  justifyContent: 'left'
+                    width: '99%',
+                    justifyContent: 'left',
+                    alignItems: 'center',
+
                 }}>
 
                   <Label>Imagem: </Label>
