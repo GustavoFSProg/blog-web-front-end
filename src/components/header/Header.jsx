@@ -99,7 +99,7 @@ function Header() {
         <LinksContainerMobile>
           <div style={{ marginLeft: '20px', marginTop: '8px' }}>
             <Link style={{
-              textDecoration: 'none', fontFamily: 'Roboto', color: 'white',
+              textDecoration: 'none', fontSize: '18px', fontFamily: 'Roboto', color: 'white',
               cursor: 'pointer'
             }} to="/">
               HOME
@@ -109,7 +109,7 @@ function Header() {
           <div style={{ marginLeft: '25px', marginBottom: '4px', marginTop: '7px', }}>
             <Link
 
-              style={{ cursor: 'pointer', textDecoration: 'none', fontFamily: 'Roboto', color: 'white  ' }}
+              style={{ cursor: 'pointer', fontSize: '18px', textDecoration: 'none', fontFamily: 'Roboto', color: 'white  ' }}
               to="/register"
             >
               CADASTRO
