@@ -38,7 +38,7 @@ export const ProductContainer = styled.div`
   /* background: #e6e6e6; */
   /* background: yellow; */
 
-  margin-left: 20px;
+  margin-left: 5px;
   border-radius: 15px;
   width: 100%;
 
@@ -76,7 +76,7 @@ export const FormContainer = styled.div`
 
   @media screen and (max-width: 900px) {
     /* margin-left: -114px; */
-      width: 17rem;
+      width: 100%;
 
   }
 

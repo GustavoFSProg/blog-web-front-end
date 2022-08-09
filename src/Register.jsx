@@ -73,7 +73,7 @@ function Register() {
 
                 <div style={{
                   display: 'flex', flexDirection: 'column',
-                    width: '99%',
+                    width: '100%',
                     justifyContent: 'left',
                     alignItems: 'center',
 
