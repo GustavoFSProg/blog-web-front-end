@@ -170,7 +170,7 @@ function Register() {
                 </div>
 
                 <br />
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'center' }}>
                 {token ? (
                   <Button className="confirm-Button" type="submit">
                     Cadastrar

@@ -99,7 +99,7 @@ export const InputFile = styled.input`
   margin-top: 20px;
 `
 export const Button = styled.button`
-  width: 34%;
+width: 34%;
   height: 48px;
   cursor: pointer;
   background: #008080;
@@ -112,7 +112,7 @@ export const Button = styled.button`
 
   :hover{
     background: green;
-    color: #ffff99
+    color: white
   }
 
 
@@ -123,7 +123,6 @@ export const Button = styled.button`
 
 
   }
-  /* display: none; */
 `
 
 export const TextArea = styled.textarea`

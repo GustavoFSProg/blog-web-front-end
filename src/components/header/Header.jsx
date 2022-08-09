@@ -58,6 +58,15 @@ function Header() {
             CADASTRO
           </Link>
         </div>
+
+        <div style={{ marginLeft: '35px' }}>
+          <Link
+            style={{ textDecoration: 'none', fontFamily: 'Roboto', color: 'black  ' }}
+            to="/login"
+          >
+            LOGIN
+          </Link>
+        </div>
       </LinksContainer>
       {/* <div style={{ display: 'flex', flexDirection: 'center' }}> */}
 
@@ -103,6 +112,16 @@ function Header() {
               cursor: 'pointer'
             }} to="/">
               HOME
+            </Link>
+          </div>
+
+          <div style={{ marginLeft: '25px', marginBottom: '4px', marginTop: '15px', }}>
+            <Link
+
+              style={{ cursor: 'pointer', fontSize: '21px', textDecoration: 'none', fontFamily: 'Roboto', color: 'white  ' }}
+              to="/login"
+            >
+              LOGIN
             </Link>
           </div>
 
