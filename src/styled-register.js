@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 888px;
   /* background: green; */
   padding-bottom: 200px;
@@ -29,23 +29,24 @@ export const DivListagemProdutos = styled.div`
     flex-direction: column;
     margin-top: 10px;
     margin-left: -32px;
-  width: 00%;
-
+    width: 100%;
   }
 `
 export const ProductContainer = styled.div`
- display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
   /* margin-left: 5px; */
   border-radius: 15px;
-  width: 100%;
+  width: 100vw;
 
   @media screen and (max-width: 900px) {
-    margin-top: 20px;
-    width: 98%;
+    /* margin-top: 20px; */
+    /* margin-left: 15px; */
+
+    /* width: 100%; */
   }
 `
 export const Input = styled.input`
@@ -59,29 +60,23 @@ export const Input = styled.input`
 
   @media screen and (max-width: 900px) {
     /* margin-left: -14px; */
-      width: 18rem;
-
+    width: 18rem;
   }
 `
-export const FormContainer = styled.div`
+export const Form = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 50vw;
-
-  /* background: green; */
-
+  /* padding-left: 20px; */
+  /* padding-right: 20px; */
+  width: 100vw;
 
   @media screen and (max-width: 900px) {
-    /* margin-left: -114px; */
-      width: 100%;
-
+    /* width: 100%; */
   }
-
 `
+
 export const Label = styled.label`
   /* margin-left: -350px; */
   font-family: 'Roboto';
@@ -122,11 +117,8 @@ export const TextArea = styled.textarea`
   background: #ffffe6;
   width: 30rem;
 
-
-
   @media screen and (max-width: 900px) {
-      width: 18rem;
-
+    width: 18rem;
   }
 `
 
@@ -134,16 +126,13 @@ export const ListContainer = styled.div`
   color: #004d4d;
   font-family: Roboto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   /* background: blue; */
 
-
-
   @media screen and (max-width: 900px) {
-      width: 80%;
-
+    /* width: 80%; */
   }
 `
-  
