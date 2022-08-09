@@ -11,12 +11,9 @@ export const Container = styled.div`
   padding-top: 4px;
   padding-bottom: 3.2px;
 
-
   @media screen and (max-width: 800px) {
-      padding-bottom: 9px;
-
+    padding-bottom: 9px;
   }
-
 `
 export const Form = styled.form`
   display: flex;
@@ -31,17 +28,26 @@ export const Form = styled.form`
 
 export const FormDois = styled.form`
   display: flex;
-  align-items: flex-start;
-  justify-content: left;
+  align-items: center;
+  flex-direction: column ;
+  justify-content: space-between;
   z-index: 9999;
-   background: linear-gradient(to right top, #8c8c8c 55%, #4d4d4d 45%);
+  background: linear-gradient(to right top, #8c8c8c 55%, #4d4d4d 45%);
   /* background:  black; */
- /* backdrop-filter: blur(20px) saturate(120%) contrast(200%); */
- /* backdrop-filter: blur(90px) saturate(90%); */
+  /* backdrop-filter: blur(20px) saturate(120%) contrast(200%); */
+  /* backdrop-filter: blur(90px) saturate(90%); */
   width: 80%;
-  padding-left: 10px ;
-  padding-right: 3px ;
-  padding-bottom: 9px ;
+  /* margin-left: 200px; */
+  padding-left: 10px;
+  padding-right: 3px;
+  padding-bottom: 9px;
+
+
+  @media screen and (max-width: 800px) {
+      width: 90%;
+      margin-top: 10px;
+  }
+
 `
 
 export const LinksContainer = styled.div`
@@ -50,8 +56,20 @@ export const LinksContainer = styled.div`
   justify-content: space-around;
 
   @media screen and (max-width: 800px) {
-    /* display: none; */
+    display: none;
     /* width: 20px; */
+  }
+`
+
+export const LinksContainerMobile = styled.div`
+  display: none;
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 15px;
+    font-size:  0.9rem;
   }
 `
 export const Input = styled.input`

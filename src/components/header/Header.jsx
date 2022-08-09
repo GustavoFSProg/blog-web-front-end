@@ -1,4 +1,4 @@
-import { Container, ImgLogo, LinksContainer, Button, Input, FormDois, Form } from './style'
+import { Container, ImgLogo, LinksContainer, LinksContainerMobile, Button, Input, FormDois, Form } from './style'
 import logo from '../../assets/logo.png'
 import { BsSearch } from 'react-icons/bs'
 import { useState } from 'react'
@@ -59,12 +59,13 @@ function Header() {
           </Link>
         </div>
       </LinksContainer>
+      {/* <div style={{ display: 'flex', flexDirection: 'center' }}> */}
 
       <FormDois
         style={{
           display: `${isButtonClicked}`,
-          marginTop: '133px',
-          marginLeft: '-280px',
+          marginTop: '207px',
+          marginLeft: '-240px',
         }}
       >
         <div
@@ -73,6 +74,7 @@ function Header() {
             width: '17rem',
             alignItems: 'center',
             justifyContent: 'center',
+            paddingBottom: '8px'
           }}
         >
           <Input
@@ -91,8 +93,38 @@ function Header() {
             color="white"
             style={{ marginLeft: '8px', marginTop: '11px' }}
           />
+
+
         </div>
+        <LinksContainerMobile>
+          <div style={{ marginLeft: '20px', marginTop: '8px' }}>
+            <Link style={{
+              textDecoration: 'none', fontFamily: 'Roboto', color: 'white',
+              cursor: 'pointer'
+            }} to="/">
+              HOME
+            </Link>
+          </div>
+
+          <div style={{ marginLeft: '25px', marginBottom: '4px', marginTop: '7px', }}>
+            <Link
+
+              style={{ cursor: 'pointer', textDecoration: 'none', fontFamily: 'Roboto', color: 'white  ' }}
+              to="/register"
+            >
+              CADASTRO
+            </Link>
+          </div>
+        </LinksContainerMobile>
+
       </FormDois>
+
+
+
+      {/* </div> */}
+
+
+
     </Container>
   )
 }
