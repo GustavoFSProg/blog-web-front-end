@@ -34,11 +34,12 @@ export const DivListagemProdutos = styled.div`
   }
 `
 export const ProductContainer = styled.div`
-  /* background: #cce6ff; */
-  /* background: #e6e6e6; */
-  /* background: yellow; */
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  margin-left: 5px;
+  /* margin-left: 5px; */
   border-radius: 15px;
   width: 100%;
 
