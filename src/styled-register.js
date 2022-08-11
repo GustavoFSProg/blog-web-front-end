@@ -37,6 +37,7 @@ export const ProductContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
 
   /* margin-left: 5px; */
   border-radius: 15px;

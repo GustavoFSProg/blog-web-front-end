@@ -1,5 +1,4 @@
 import Header from './components/header/Header'
-import moment from 'moment'
 import api from './api'
 import {
   Container,
@@ -12,7 +11,7 @@ import {
   ListContainer,
   Form,
 } from './styled-register'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const token = localStorage.getItem('Token')
 
@@ -28,6 +27,8 @@ function Register() {
     event.preventDefault()
 
     try {
+      console.log(`Token:${token}`)
+
       const data = new FormData()
 
       data.append('title', title)
@@ -35,7 +36,9 @@ function Register() {
       data.append('autor', autor)
       data.append('image', image)
 
-      await api.post(`/register`, data)
+      // const dados = { token, data }
+
+      await api.post("/register", data)
 
       return alert('Cadastro realizado com sucesso!')
     } catch (error) {
@@ -48,22 +51,11 @@ function Register() {
     <>
       <Header />
       <Container>
-          <ProductContainer>
+        <ProductContainer>
           <ListContainer>
             <h1>Cadastro</h1>
             <br />
-            {/* <div
-              style={{
-                // background: 'yellow',
-                fontFamily: 'Roboto',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                width: '100vw',
-                background: 'green'
-              }}
-            > */}
-            {/* <FormContainer> */}
+
             <Form onSubmit={handleSubmit}>
               <div
                 style={{
@@ -90,7 +82,7 @@ function Register() {
                   id="image"
                   className="botao-imagem"
                   onChange={(e) => setImage(e.target.files[0])}
-                  />
+                />
               </div>
 
               <div
@@ -99,7 +91,6 @@ function Register() {
                   flexDirection: 'column',
                 }}
               >
-
                 <div
                   style={{
                     display: 'flex',
@@ -113,7 +104,7 @@ function Register() {
                 </div>
 
                 <Input id="title" value={title} onChange={(e) => setTitle(e.target.value)} />
-                </div>
+              </div>
 
               <div
                 style={{
@@ -121,7 +112,6 @@ function Register() {
                   flexDirection: 'column',
                 }}
               >
-
                 <div
                   style={{
                     display: 'flex',
@@ -134,26 +124,25 @@ function Register() {
                   <Label>Texto: </Label>
                 </div>
 
-                  <TextArea
+                <TextArea
                   rows="22"
-                    // cols="63"
+                  // cols="63"
                   id="text"
                   value={text}
                   onChange={(e) => setText(e.target.value)}
-                    style={{
-                      borderRadius: '8px',
-                      border: '1px solid #a6a6a6',
-                    }}
-                  />
-                </div>
-                <br />
+                  style={{
+                    borderRadius: '8px',
+                    border: '1px solid #a6a6a6',
+                  }}
+                />
+              </div>
+              <br />
               <div
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
                 }}
               >
-
                 <div
                   style={{
                     display: 'flex',
@@ -166,28 +155,34 @@ function Register() {
                   <Label>Autor: </Label>
                 </div>
 
-                  <Input id="autor" value={autor} onChange={(e) => setAutor(e.target.value)} />
-                </div>
+                <Input id="autor" value={autor} onChange={(e) => setAutor(e.target.value)} />
+              </div>
 
-                <br />
-              <div style={{ display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'center' }}>
-                {token ? (
+              <br />
+              <div
+                style={{
+                  display: 'flex',
+                  width: '100%',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                {/* {token ? (
                   <Button className="confirm-Button" type="submit">
                     Cadastrar
                   </Button>
                 ) : (
                   <h2>Unautorized!!!</h2>
-                  )}
-                </div>
+                )} */}
+              </div>
 
-                <br />
+              <br />
 
-                <br />
+              <br />
             </Form>
-            {/* </FormContainer> */}
+
           </ListContainer>
 
-          {/* </div> */}
         </ProductContainer>
       </Container>
     </>
