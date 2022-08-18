@@ -12,33 +12,39 @@ import {
   Form,
 } from './styled-register'
 import { useState } from 'react'
+import querystring from 'qs'
 
 const token = localStorage.getItem('Token')
 
-function Register() {
-  const [post, setPosts] = useState([])
 
-  const [title, setTitle] = useState('')
-  const [autor, setAutor] = useState('')
-  const [text, setText] = useState('')
+function Register() {
+  const [title, setTitle] = useState('LARANJA')
+  const [autor, setAutor] = useState('LARANJA')
+  const [text, setText] = useState('LARANJA')
   const [image, setImage] = useState([])
 
   async function handleSubmit(event) {
     event.preventDefault()
 
     try {
-      console.log(`Token:${token}`)
+
+      const Token = await api.post('/token-verify', { token })
+
+      console.log(`Token:${Token}`)
+
+      if (!Token) return alert("Token invalido!!")
 
       const data = new FormData()
+
 
       data.append('title', title)
       data.append('text', text)
       data.append('autor', autor)
       data.append('image', image)
 
-      // const dados = { token, data }
 
-      await api.post("/register", data)
+
+      await api.post('/register', data)
 
       return alert('Cadastro realizado com sucesso!')
     } catch (error) {
@@ -167,22 +173,20 @@ function Register() {
                   justifyContent: 'center',
                 }}
               >
-                {/* {token ? (
-                  <Button className="confirm-Button" type="submit">
-                    Cadastrar
-                  </Button>
-                ) : (
-                  <h2>Unautorized!!!</h2>
-                )} */}
+                {/* {token ? ( */}
+                <Button className="confirm-Button" type="submit">
+                  Cadastrar
+                </Button>
+                {/* ) : ( */}
+                {/* <h2>Unautorized!!!</h2> */}
+                {/* )} */}
               </div>
 
               <br />
 
               <br />
             </Form>
-
           </ListContainer>
-
         </ProductContainer>
       </Container>
     </>
