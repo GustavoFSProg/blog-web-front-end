@@ -86,7 +86,7 @@ function Login() {
                   <Label>Senha: </Label>
                 </div>
 
-                <Input id="password" value={password}
+                <Input id="password" value={password} type="password"
                   onChange={(e) => setPassword(e.target.value)} />
               </div>
 

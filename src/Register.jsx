@@ -13,7 +13,6 @@ import {
 } from './styled-register'
 import { useState } from 'react'
 
-const token = localStorage.getItem('Token')
 
 function Register() {
   const [post, setPosts] = useState([])
@@ -23,11 +22,18 @@ function Register() {
   const [text, setText] = useState('')
   const [image, setImage] = useState([])
 
+  const Token = localStorage.getItem('Token')
+
+
   async function handleSubmit(event) {
     event.preventDefault()
 
     try {
-      console.log(`Token:${token}`)
+      console.log(`Token:${Token}`)
+      if (!Token) return alert('Token Inválido, efetue o Login novamente!!')
+
+
+
 
       const data = new FormData()
 
@@ -35,15 +41,15 @@ function Register() {
       data.append('text', text)
       data.append('autor', autor)
       data.append('image', image)
+      data.append('token', Token)
 
-      // const dados = { token, data }
-
-      await api.post("/register", data)
+      await api.post('/register', data)
+      // api.defaults.headers.Authorization = `token: ${token}`
 
       return alert('Cadastro realizado com sucesso!')
     } catch (error) {
-      console.log(error)
-      return alert(`Deu erro no front ${error}`)
+
+      return alert('Erro no Cadastro!!')
     }
   }
 
@@ -167,22 +173,20 @@ function Register() {
                   justifyContent: 'center',
                 }}
               >
-                {/* {token ? (
-                  <Button className="confirm-Button" type="submit">
-                    Cadastrar
-                  </Button>
-                ) : (
-                  <h2>Unautorized!!!</h2>
-                )} */}
+                {/* {token ? ( */}
+                <Button className="confirm-Button" type="submit">
+                  Cadastrar
+                </Button>
+                {/* ) : ( */}
+                {/* <h2>Unautorized!!!</h2> */}
+                {/* )} */}
               </div>
 
               <br />
 
               <br />
             </Form>
-
           </ListContainer>
-
         </ProductContainer>
       </Container>
     </>
