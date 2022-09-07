@@ -8,6 +8,10 @@ import { Link } from 'react-router-dom'
 function Header() {
   const [isButtonClicked, setIsButtonClicked] = useState('none')
 
+  function handleLogout() {
+    localStorage.clear()
+  }
+
   function handleLike() {
     setIsButtonClicked('flex')
   }
@@ -67,6 +71,15 @@ function Header() {
             LOGIN
           </Link>
         </div>
+
+        <div style={{ marginLeft: '35px' }}>
+          <Link
+            style={{ textDecoration: 'none', fontFamily: 'Roboto', color: 'black  ' }}
+            onClick={handleLogout}
+          >
+            LOGOUT
+          </Link>
+        </div>
       </LinksContainer>
       {/* <div style={{ display: 'flex', flexDirection: 'center' }}> */}
 
@@ -122,6 +135,16 @@ function Header() {
               to="/login"
             >
               LOGIN
+            </Link>
+          </div>
+          <div style={{ marginLeft: '25px', marginBottom: '4px', marginTop: '15px', }}>
+            <Link
+
+              style={{ cursor: 'pointer', fontSize: '21px', textDecoration: 'none', fontFamily: 'Roboto', color: 'white  ' }}
+              onClick={handleLogout}
+
+            >
+              LOGOUT
             </Link>
           </div>
 

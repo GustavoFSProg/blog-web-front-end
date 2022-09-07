@@ -12,7 +12,7 @@ import {
   Form,
 } from './styled-register'
 import { useState } from 'react'
-
+import { useHistory } from 'react-router-dom'
 
 function Register() {
   const [post, setPosts] = useState([])
@@ -22,18 +22,19 @@ function Register() {
   const [text, setText] = useState('')
   const [image, setImage] = useState([])
 
-  const Token = localStorage.getItem('Token')
+  const history = useHistory()
 
+
+  const Token = localStorage.getItem('Token')
 
   async function handleSubmit(event) {
     event.preventDefault()
 
+
+
     try {
       console.log(`Token:${Token}`)
       if (!Token) return alert('Token Inválido, efetue o Login novamente!!')
-
-
-
 
       const data = new FormData()
 
@@ -44,11 +45,11 @@ function Register() {
       data.append('token', Token)
 
       await api.post('/register', data)
-      // api.defaults.headers.Authorization = `token: ${token}`
+
+      history.push('/')
 
       return alert('Cadastro realizado com sucesso!')
     } catch (error) {
-
       return alert('Erro no Cadastro!!')
     }
   }
