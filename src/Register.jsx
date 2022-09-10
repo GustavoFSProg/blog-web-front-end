@@ -14,6 +14,7 @@ import {
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
+
 function Register() {
   const [post, setPosts] = useState([])
 
@@ -25,7 +26,7 @@ function Register() {
   const history = useHistory()
 
 
-  const Token = localStorage.getItem('Token')
+  const token = localStorage.getItem('Token')
 
   async function handleSubmit(event) {
     event.preventDefault()
@@ -33,8 +34,9 @@ function Register() {
 
 
     try {
-      console.log(`Token:${Token}`)
-      if (!Token) return alert('Token Inválido, efetue o Login novamente!!')
+      console.log(`Token:${token}`)
+
+      if (!token) return alert('Token Inválido, efetue o Login novamente!!')
 
       const data = new FormData()
 
@@ -42,9 +44,18 @@ function Register() {
       data.append('text', text)
       data.append('autor', autor)
       data.append('image', image)
-      data.append('token', Token)
 
-      await api.post('/register', data)
+      // await api.post('/register', data)
+
+      await api({
+        method: 'POST',
+        data: data,
+        url: '/register',
+        headers: { 'Content-type': 'multipart/form-data', token: token }
+
+
+
+      })
 
       history.push('/')
 

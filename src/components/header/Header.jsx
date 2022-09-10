@@ -10,6 +10,8 @@ function Header() {
 
   function handleLogout() {
     localStorage.clear()
+
+    return alert("Logout Efetuado com Sucesso!!")
   }
 
   function handleLike() {
