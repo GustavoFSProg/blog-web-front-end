@@ -76,7 +76,7 @@ function App() {
                 // justifyContent: 'top',
                 flexDirection: 'column',
                 alignItems: 'flex-start',
-                marginTop: '87rem',
+
 
                 // alignItems: 'flex-start',
 
