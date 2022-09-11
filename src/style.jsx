@@ -66,7 +66,7 @@ export const ContainerWrapper = styled.div`
   align-items: center;
 
   @media screen and (max-width: 700px) {
-    margin-top: 16rem;
+    margin-top: 26rem;
   width: 100vw;
 
   }
