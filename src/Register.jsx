@@ -14,7 +14,6 @@ import {
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
-
 function Register() {
   const [post, setPosts] = useState([])
 
@@ -25,13 +24,10 @@ function Register() {
 
   const history = useHistory()
 
-
   const token = localStorage.getItem('Token')
 
   async function handleSubmit(event) {
     event.preventDefault()
-
-
 
     try {
       console.log(`Token:${token}`)
@@ -51,10 +47,10 @@ function Register() {
         method: 'POST',
         data: data,
         url: '/register',
-        headers: { 'Content-type': 'multipart/form-data', token: token }
-
-
-
+        headers: {
+          'Content-type': 'multipart/form-data',
+          token: token,
+        },
       })
 
       history.push('/')

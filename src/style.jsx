@@ -76,14 +76,30 @@ export const AutorContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: left;
+  justify-content: space-between;
   margin-left: 17px;
   margin-top: 45px;
+  /* background: blue; */
+  width: 100% ;
+
 
   @media screen and (max-width: 700px) {
     margin-top: 18px;
   }
 `
+export const LikeButton = styled.div`
+  display: flex;
+  background: transparent;
+  transition: ease 0.7s ;
+border: none;
+
+cursor: pointer;
+  :hover{
+    background: lightblue;
+  }
+
+`
+
 
 export const ContainerParagraph = styled.div`
   display: flex;

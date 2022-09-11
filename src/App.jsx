@@ -13,9 +13,11 @@ import {
   ImgBody,
   ImgFace,
   H1,
+  LikeButton,
   AutorContainer,
 } from './style'
 import { useEffect, useState } from 'react'
+import { AiFillLike } from 'react-icons/ai'
 
 function App() {
   const [post, setPosts] = useState([])
@@ -101,47 +103,86 @@ function App() {
                     <AutorContainer>
                       <div
                         style={{
+                          // background: 'gray',
                           display: 'flex',
-                          width: '90%',
-                          marginTop: '5px',
-                          justifyContent: 'left',
+                          flexDirection: 'row',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          width: '29%',
                         }}
                       >
-                        <ImgFace src={face} alt="face" />
+                        <div
+                          style={{
+                            display: 'flex',
+                            width: '90%',
+                            // marginTop: '5px',
+                            // justifyContent: 'left',
+                          }}
+                        >
+                          <ImgFace src={face} alt="face" />
+                        </div>
+
+                        <div
+                          style={{
+                            display: 'flex',
+                            width: '80%',
+                            justifyContent: 'left',
+                            flexDirection: 'column',
+                            // background: 'orange',
+                            // marginTop: '14px',
+
+                            // marginLeft: '-22px',
+                          }}
+                        >
+                          <span
+                            style={{
+                              width: '160px',
+                              fontFamily: 'Roboto',
+                              fontSize: '0.84rem',
+                              paddingBottom: '1px',
+                              color: '#595959',
+                            }}
+                          >
+                            {item.autor}
+                          </span>
+                          <span
+                            style={{
+                              width: '160px',
+                              paddingBottom: '2px',
+                              fontFamily: 'Roboto',
+                              fontSize: '0.76rem',
+                              color: '#595959',
+                              // background: 'yellow',
+                              height: 'auto',
+                            }}
+                          >
+                            {getDateWithoutTime(item.createdAt)}
+                          </span>
+                        </div>
                       </div>
 
                       <div
                         style={{
+                          width: '53px',
+                          // background: 'green',
+                          paddingTop: '8px',
                           display: 'flex',
-                          width: '90%',
-                          justifyContent: 'center',
-                          flexDirection: 'column',
-                          marginTop: '14px',
-
-                          marginLeft: '-4px',
+                          alignItems: 'center',
+                          marginRight: '85px'
                         }}
                       >
+                        <LikeButton onClick={() => alert('Clicou no Like!')}>
+                          <AiFillLike size="27" color="blue" />
+                        </LikeButton>
                         <span
                           style={{
-                            width: '160px',
+                            marginLeft: '4px',
+                            color: 'blue',
                             fontFamily: 'Roboto',
-                            fontSize: '0.84rem',
-                            paddingBottom: '1px',
-                            color: '#595959',
+                            fontSize: '15px',
                           }}
                         >
-                          {item.autor}
-                        </span>
-                        <span
-                          style={{
-                            width: '160px',
-                            paddingBottom: '2px',
-                            fontFamily: 'Roboto',
-                            fontSize: '0.76rem',
-                            color: '#595959',
-                          }}
-                        >
-                          {getDateWithoutTime(item.createdAt)}
+                          <strong>10</strong>
                         </span>
                       </div>
                     </AutorContainer>
