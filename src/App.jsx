@@ -15,6 +15,7 @@ import {
   H1,
   LikeButton,
   AutorContainer,
+  LikeContainer,
 } from './style'
 import { useEffect, useState } from 'react'
 import { AiFillLike } from 'react-icons/ai'
@@ -43,7 +44,7 @@ function App() {
         style={{
           width: '98.8vw',
           height: '100vh',
-          background: '#f2f2f2',
+          // background: '#f2f2f2',
           display: 'flex',
           justifyContent: 'space-around',
           alignItems: 'center',
@@ -55,6 +56,7 @@ function App() {
             width: '98.8vw',
             height: '100%',
             background: '#f2f2f2',
+
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
@@ -161,18 +163,9 @@ function App() {
                         </div>
                       </div>
 
-                      <div
-                        style={{
-                          width: '53px',
-                          // background: 'green',
-                          paddingTop: '8px',
-                          display: 'flex',
-                          alignItems: 'center',
-                          marginRight: '85px'
-                        }}
-                      >
+                      <LikeContainer>
                         <LikeButton onClick={() => alert('Clicou no Like!')}>
-                          <AiFillLike size="27" color="blue" />
+                          <AiFillLike size="25" color="blue" />
                         </LikeButton>
                         <span
                           style={{
@@ -184,7 +177,7 @@ function App() {
                         >
                           <strong>10</strong>
                         </span>
-                      </div>
+                      </LikeContainer>
                     </AutorContainer>
                     <div
                       style={{
