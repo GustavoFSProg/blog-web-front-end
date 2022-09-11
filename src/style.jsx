@@ -11,7 +11,7 @@ export const ContainerApp = styled.div`
 
   @media screen and (max-width: 800px) {
     /* margin-top: -34.4rem; */
-    /* margin-top: 11rem; */
+    margin-top: 11rem;
     width: 90%;
     margin-left: 7px;
     /* height: 100vh; */
@@ -66,7 +66,9 @@ export const ContainerWrapper = styled.div`
   align-items: center;
 
   @media screen and (max-width: 700px) {
-    margin-top: 6rem;
+    margin-top: 16rem;
+  width: 100vw;
+
   }
 `
 
