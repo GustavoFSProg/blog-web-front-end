@@ -29,7 +29,7 @@ export const ImgBody = styled.img`
   justify-content: center;
 
   @media screen and (max-width: 800px) {
-    width: 92%;
+    width: 94%;
     height: 175px;
   }
 `
@@ -67,7 +67,7 @@ export const ContainerWrapper = styled.div`
   margin-top: 111rem;
 
   @media screen and (max-width: 700px) {
-    margin-top: 111rem;
+    margin-top: 109rem;
     width: 100vw;
   }
 `
