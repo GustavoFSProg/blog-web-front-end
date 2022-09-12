@@ -96,6 +96,7 @@ function App() {
                       flexDirection: 'column',
                       alignItems: 'flex-start',
                       marginBottom: '60px',
+                      width: '100%',
 
                       // marginLeft: '13px'
                     }}
