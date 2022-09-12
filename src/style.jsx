@@ -11,10 +11,10 @@ export const ContainerApp = styled.div`
 
   @media screen and (max-width: 800px) {
     /* margin-top: -34.4rem; */
-    margin-top: 11rem;
+    margin-top: 2rem;
     width: 90%;
     margin-left: 7px;
-    /* height: 100vh; */
+    height: auto;
   }
 `
 export const ImgBody = styled.img`
@@ -57,17 +57,16 @@ export const H1 = styled.h1`
 
 export const ContainerWrapper = styled.div`
   width: 99vw;
-  height: 100vh;
+  height: auto;
   background: #f2f2f2;
-  margin-top: 16rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 100rem;
+  margin-top: 105rem;
 
   @media screen and (max-width: 700px) {
-    margin-top:83rem;
+    margin-top:113rem;
   width: 100vw;
 
   }

@@ -75,7 +75,8 @@ function App() {
                 display: 'flex',
                 // justifyContent: 'top',
                 flexDirection: 'column',
-                alignItems: 'flex-start',
+                alignItems: 'center',
+                justifyContent: 'center'
 
 
                 // alignItems: 'flex-start',
