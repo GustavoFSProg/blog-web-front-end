@@ -132,8 +132,13 @@ export const LikeContainer = styled.div`
   margin-right: 85px;
   /* background: orange; */
 
-  @media screen and (max-width: 670px) {
-    margin-right: -32px;
+  @media screen and (max-width: 470px) {
+    margin-right: -15px;
+  }
+
+
+  @media screen and (min-width: 470px) and (max-width: 700px) {
+    margin-right: -155px;
   }
 `
 
