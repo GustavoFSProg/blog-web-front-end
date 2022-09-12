@@ -6,12 +6,13 @@ export const ContainerApp = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+    margin-top: 3rem;
 
   /* margin-top: -26.5rem; */
 
   @media screen and (max-width: 800px) {
     /* margin-top: -34.4rem; */
-    margin-top: 2rem;
+    margin-top: 1rem;
     /* margin-left: 7px; */
     height: auto;
     width: 100%;
@@ -28,8 +29,8 @@ export const ImgBody = styled.img`
   justify-content: center;
 
   @media screen and (max-width: 800px) {
-    width: 100%;
-    height: 165px;
+    width: 95%;
+    height: 175px;
   }
 `
 export const ImgFace = styled.img`
@@ -63,10 +64,10 @@ export const ContainerWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 105rem;
+  margin-top: 118rem;
 
   @media screen and (max-width: 700px) {
-    margin-top: 113rem;
+    margin-top: 90rem;
     width: 100vw;
   }
 `
@@ -77,7 +78,8 @@ export const AutorContainer = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   margin-left: 17px;
-  margin-top: 45px;
+  margin-top: 35px;
+  margin-bottom: 5px;
   width: 100%;
   @media screen and (max-width: 700px) {
     margin-top: 18px;
@@ -131,7 +133,7 @@ export const LikeContainer = styled.div`
   /* background: orange; */
 
   @media screen and (max-width: 670px) {
-    margin-right: -45px;
+    margin-right: -32px;
   }
 `
 
