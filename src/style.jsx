@@ -29,7 +29,7 @@ export const ImgBody = styled.img`
   justify-content: center;
 
   @media screen and (max-width: 800px) {
-    width: 94%;
+    width: 95%;
     height: 175px;
   }
 `
