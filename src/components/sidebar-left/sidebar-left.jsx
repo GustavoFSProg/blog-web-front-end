@@ -10,10 +10,18 @@ import { FcLike } from 'react-icons/fc'
 import { FcNook } from 'react-icons/fc'
 import { FcCalendar } from 'react-icons/fc'
 import { FcBinoculars } from 'react-icons/fc'
-
-
+import { useHistory } from 'react-router-dom'
 
 function SidebarLeft() {
+
+  const history = useHistory()
+
+  function buttonLogin() {
+
+    history.push('/login')
+
+  }
+
   return (
     <Container>
       <div
@@ -47,7 +55,7 @@ function SidebarLeft() {
           <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
             <Button style={{}}>CREATE ACCOUNT</Button>
 
-            <ButtonDois>Login</ButtonDois>
+            <ButtonDois onClick={buttonLogin}>Login</ButtonDois>
           </div>
         </div>
         <DivLinks>
@@ -55,7 +63,12 @@ function SidebarLeft() {
             <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
               <FcAssistant size="23" />
               <span
-                style={{ color: '#404040', marginLeft: '8px', fontSize: '17px', fontFamily: 'Roboto' }}
+                style={{
+                  color: '#404040',
+                  marginLeft: '8px',
+                  fontSize: '17px',
+                  fontFamily: 'Roboto',
+                }}
               >
                 Home
               </span>

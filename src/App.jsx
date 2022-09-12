@@ -16,7 +16,7 @@ import {
   LikeButton,
   AutorContainer,
   LikeContainer,
-  ContainerFace
+  ContainerFace,
 } from './style'
 import { useEffect, useState } from 'react'
 import { AiFillLike } from 'react-icons/ai'
@@ -34,17 +34,13 @@ function App() {
     handlePosts()
 
     setButtonAbled(true)
-
-
   }
 
   async function getLikes(id) {
     const { likes } = await api.get(`/get-likes/${id}`)
 
-
     return likes
   }
-
 
   async function handlePosts() {
     const { data } = await api.get(`/all`)
@@ -95,8 +91,7 @@ function App() {
                 // justifyContent: 'top',
                 flexDirection: 'column',
                 alignItems: 'center',
-                justifyContent: 'center'
-
+                justifyContent: 'center',
 
                 // alignItems: 'flex-start',
 
@@ -124,9 +119,7 @@ function App() {
                       <ImgBody src={item.image} alt="foto1" />
                     </ContainerApp>
                     <AutorContainer>
-                      <ContainerFace >
-
-
+                      <ContainerFace>
                         <div
                           style={{
                             display: 'flex',
@@ -176,7 +169,6 @@ function App() {
                           </span>
                         </div>
                       </ContainerFace>
-
 
                       <LikeContainer>
                         <LikeButton disabled={buttonAbled} onClick={() => handleLikes(item.id)}>
