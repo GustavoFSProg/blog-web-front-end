@@ -87,7 +87,7 @@ export const AutorContainer = styled.div`
     width: 220px;
   }
 `
-export const LikeButton = styled.div`
+export const LikeButton = styled.button`
   display: flex;
   background: transparent;
   transition: ease 0.7s;

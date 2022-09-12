@@ -23,6 +23,7 @@ import { AiFillLike } from 'react-icons/ai'
 
 function App() {
   const [post, setPosts] = useState([])
+  const [buttonAbled, setButtonAbled] = useState(false)
 
   function getDateWithoutTime(date) {
     return moment(date).format('DD-MM-YYYY')
@@ -31,6 +32,8 @@ function App() {
   async function handleLikes(id) {
     await api.put(`/likes/${id}`)
     handlePosts()
+
+    setButtonAbled(true)
 
 
   }
@@ -176,7 +179,7 @@ function App() {
 
 
                       <LikeContainer>
-                        <LikeButton onClick={() => handleLikes(item.id)}>
+                        <LikeButton disabled={buttonAbled} onClick={() => handleLikes(item.id)}>
                           <AiFillLike size="25" color="blue" />
                         </LikeButton>
                         <span
