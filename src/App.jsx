@@ -28,6 +28,21 @@ function App() {
     return moment(date).format('DD-MM-YYYY')
   }
 
+  async function handleLikes(id) {
+    await api.put(`/likes/${id}`)
+    handlePosts()
+
+
+  }
+
+  async function getLikes(id) {
+    const { likes } = await api.get(`/get-likes/${id}`)
+
+
+    return likes
+  }
+
+
   async function handlePosts() {
     const { data } = await api.get(`/all`)
 
@@ -161,7 +176,7 @@ function App() {
 
 
                       <LikeContainer>
-                        <LikeButton onClick={() => alert('Clicou no Like!')}>
+                        <LikeButton onClick={() => handleLikes(item.id)}>
                           <AiFillLike size="25" color="blue" />
                         </LikeButton>
                         <span
@@ -172,7 +187,7 @@ function App() {
                             fontSize: '15px',
                           }}
                         >
-                          <strong>10</strong>
+                          <strong>{item.likes}</strong>
                         </span>
                       </LikeContainer>
                     </AutorContainer>
