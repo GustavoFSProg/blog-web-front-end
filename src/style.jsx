@@ -12,15 +12,16 @@ export const ContainerApp = styled.div`
   @media screen and (max-width: 800px) {
     /* margin-top: -34.4rem; */
     margin-top: 2rem;
-    width: 90%;
-    margin-left: 7px;
+    /* margin-left: 7px; */
     height: auto;
+    width: 100%;
   }
 `
 export const ImgBody = styled.img`
   /* width: 710px; */
   height: 325px;
   width: 95%;
+  align-items: center;
 
   display: flex;
   border-radius: 9px;
@@ -29,7 +30,6 @@ export const ImgBody = styled.img`
   @media screen and (max-width: 800px) {
     width: 100%;
     height: 165px;
-    /* margin-top: -12rem; */
   }
 `
 export const ImgFace = styled.img`
@@ -56,7 +56,7 @@ export const H1 = styled.h1`
 `
 
 export const ContainerWrapper = styled.div`
-  width: 99vw;
+  width: 100%;
   height: auto;
   background: #f2f2f2;
   display: flex;
@@ -66,9 +66,8 @@ export const ContainerWrapper = styled.div`
   margin-top: 105rem;
 
   @media screen and (max-width: 700px) {
-    margin-top:113rem;
-  width: 100vw;
-
+    margin-top: 113rem;
+    width: 100vw;
   }
 `
 
@@ -79,12 +78,11 @@ export const AutorContainer = styled.div`
   justify-content: space-between;
   margin-left: 17px;
   margin-top: 45px;
- width: 100% ;
+  width: 100%;
   @media screen and (max-width: 700px) {
     margin-top: 18px;
     margin-left: 57px;
-  width: 220px;
-
+    width: 220px;
   }
 `
 export const LikeButton = styled.div`
@@ -130,13 +128,22 @@ export const LikeContainer = styled.div`
   display: flex;
   align-items: center;
   margin-right: 85px;
-          /* background: orange; */
-
-
+  /* background: orange; */
 
   @media screen and (max-width: 670px) {
-        margin-right: -30px;
+    margin-right: -45px;
+  }
+`
 
+export const ContainerFace = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 29%;
+  margin-left: 37px;
 
+  @media screen and (max-width: 670px) {
+    margin-left: -15px;
   }
 `

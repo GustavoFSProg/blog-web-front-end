@@ -16,6 +16,7 @@ import {
   LikeButton,
   AutorContainer,
   LikeContainer,
+  ContainerFace
 } from './style'
 import { useEffect, useState } from 'react'
 import { AiFillLike } from 'react-icons/ai'
@@ -104,20 +105,13 @@ function App() {
                       <ImgBody src={item.image} alt="foto1" />
                     </ContainerApp>
                     <AutorContainer>
-                      <div
-                        style={{
-                          // background: 'gray',
-                          display: 'flex',
-                          flexDirection: 'row',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          width: '29%',
-                        }}
-                      >
+                      <ContainerFace >
+
+
                         <div
                           style={{
                             display: 'flex',
-                            width: '90%',
+                            width: '100%',
                             // marginTop: '5px',
                             // justifyContent: 'left',
                           }}
@@ -162,7 +156,8 @@ function App() {
                             {getDateWithoutTime(item.createdAt)}
                           </span>
                         </div>
-                      </div>
+                      </ContainerFace>
+
 
                       <LikeContainer>
                         <LikeButton onClick={() => alert('Clicou no Like!')}>
