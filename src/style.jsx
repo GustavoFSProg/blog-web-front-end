@@ -69,6 +69,20 @@ export const ContainerWrapper = styled.div`
     width: 100%;
   }
 `
+export const ContainImageBody = styled.div`
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+  @media screen and (max-width: 700px) {
+   
+    width: 79%;
+  }
+
+`
 
 export const AutorContainer = styled.div`
   display: flex;

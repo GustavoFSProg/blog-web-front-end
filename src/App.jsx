@@ -18,6 +18,7 @@ import {
   LikeContainer,
   ContainerFace,
   ProfileButton,
+  ContainImageBody,
 } from './style'
 import { useEffect, useState } from 'react'
 import { AiFillLike } from 'react-icons/ai'
@@ -95,28 +96,9 @@ function App() {
           </div>
 
           <ContainerWrapper>
-            <div
-              style={{
-                // background: 'blue',
-                // width: '100%',
-                width: '80%',
-
-                display: 'flex',
-                // justifyContent: 'top',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-
-                // alignItems: 'flex-start',
-
-                // marginLeft: '13px'
-              }}
-            >
-
-
+            <ContainImageBody>
               {post.map((item) => {
                 return (
-
                   <div
                     style={{
                       // background: 'blue',
@@ -129,7 +111,6 @@ function App() {
                       // width: '100%',
                       width: '126%',
 
-                      // marginLeft: '13px'
                     }}
                     key={item.id}
                   >
@@ -224,7 +205,7 @@ function App() {
                   </div>
                 )
               })}
-            </div>
+            </ContainImageBody>
           </ContainerWrapper>
 
           <div>
