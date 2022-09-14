@@ -154,3 +154,28 @@ export const ContainerFace = styled.div`
     margin-left: -15px;
   }
 `
+export const ProfileButton = styled.button`
+  display: flex;
+  width: 5rem;
+  height: 2rem;
+  background: #339cff;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px ;
+  border: none;
+  border-radius: 12px;
+  margin-left: 38px;
+  cursor: pointer;
+  transition: ease 0.8s;
+
+  :hover{
+    background: #80bfff;
+    color: #404040;
+  }
+
+
+  @media screen and (max-width: 670px) {
+    margin-top: 15px;
+  }
+`

@@ -34,9 +34,11 @@ function Profile() {
 
   async function handleLikes(id) {
     await api.put(`/likes/${id}`)
-    handlePosts()
-
+    handlePostsProfile()
     setButtonAbled(true)
+
+
+    // setButtonAbled(true)
   }
 
   async function handlePostsProfile() {
@@ -94,6 +96,7 @@ function Profile() {
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
+                width: '100%',
 
                 // alignItems: 'flex-start',
 
@@ -170,7 +173,7 @@ function Profile() {
                   </ContainerFace>
 
                   <LikeContainer>
-                    <LikeButton disabled={buttonAbled} onClick={() => handleLikes(item.id)}>
+                    <LikeButton disabled={buttonAbled} onClick={() => handleLikes(post.id)}>
                       <AiFillLike size="25" color="blue" />
                     </LikeButton>
                     <span

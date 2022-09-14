@@ -7,7 +7,7 @@ import Register from './Register'
 
 function Routes() {
   return (
-    <AuthProvider>
+    // <AuthProvider>
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={App} />
@@ -16,7 +16,7 @@ function Routes() {
           <Route path="/profile" component={Profile} />
         </Switch>
       </BrowserRouter>
-    </AuthProvider>
+    // </AuthProvider>
   )
 }
 

@@ -17,6 +17,7 @@ import {
   AutorContainer,
   LikeContainer,
   ContainerFace,
+  ProfileButton,
 } from './style'
 import { useEffect, useState } from 'react'
 import { AiFillLike } from 'react-icons/ai'
@@ -46,13 +47,11 @@ function App() {
   async function handleProfile(id) {
     // const { data } = await api.get(`/profile/${postId}`)
 
-
-    setpostId(id)
+    // setpostId(id)
 
     localStorage.setItem('PostId', id)
 
     history.push('/profile')
-
   }
 
   async function handlePosts() {
@@ -99,6 +98,7 @@ function App() {
             <div
               style={{
                 // background: 'blue',
+                width: '198%',
 
                 display: 'flex',
                 // justifyContent: 'top',
@@ -111,8 +111,11 @@ function App() {
                 // marginLeft: '13px'
               }}
             >
+
+
               {post.map((item) => {
                 return (
+
                   <div
                     style={{
                       // background: 'blue',
@@ -122,7 +125,7 @@ function App() {
                       flexDirection: 'column',
                       alignItems: 'flex-start',
                       marginBottom: '60px',
-                      width: '100%',
+                      width: '51%',
 
                       // marginLeft: '13px'
                     }}
@@ -215,9 +218,7 @@ function App() {
                       <Span>TEXTO: {item.description}</Span>
                     </ContainerParagraph>
 
-                    <button onClick={() => handleProfile(item.id)}>
-                      PROFILE
-                    </button>
+                    <ProfileButton onClick={() => handleProfile(item.id)}>POST</ProfileButton>
                   </div>
                 )
               })}
