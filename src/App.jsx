@@ -69,7 +69,7 @@ function App() {
 
       <div
         style={{
-          width: '98.8vw',
+          width: '98.8%',
           height: '100vh',
           // background: '#f2f2f2',
           display: 'flex',
@@ -80,7 +80,7 @@ function App() {
       >
         <div
           style={{
-            width: '98.8vw',
+            width: '98.8%',
             height: '100%',
             background: '#f2f2f2',
 
@@ -98,7 +98,8 @@ function App() {
             <div
               style={{
                 // background: 'blue',
-                width: '198%',
+                // width: '100%',
+                width: '80%',
 
                 display: 'flex',
                 // justifyContent: 'top',
@@ -125,7 +126,8 @@ function App() {
                       flexDirection: 'column',
                       alignItems: 'flex-start',
                       marginBottom: '60px',
-                      width: '51%',
+                      // width: '100%',
+                      width: '126%',
 
                       // marginLeft: '13px'
                     }}

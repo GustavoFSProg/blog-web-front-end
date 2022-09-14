@@ -64,8 +64,9 @@ export const ContainerWrapper = styled.div`
   margin-top: 1rem;
 
   @media screen and (max-width: 700px) {
-    margin-top: -10rem;
-    width: 100vw;
+       margin-top: -5rem;
+
+    width: 100%;
   }
 `
 
@@ -130,7 +131,7 @@ export const LikeContainer = styled.div`
   /* background: orange; */
 
   @media screen and (max-width: 470px) {
-    margin-right: -15px;
+    margin-right: -13px;
   }
 
 

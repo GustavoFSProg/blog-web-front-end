@@ -6,15 +6,14 @@ export const ContainerApp = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-    margin-top: 3rem;
-
+  margin-top: 3rem;
 
   @media screen and (max-width: 800px) {
     /* margin-top: -34.4rem; */
     margin-top: 1rem;
     /* margin-left: 7px; */
     height: auto;
-    width: 93%;
+    width: 100%;
   }
 `
 export const ImgBody = styled.img`
@@ -27,9 +26,8 @@ export const ImgBody = styled.img`
   border-radius: 9px;
   justify-content: center;
 
-
   @media screen and (max-width: 800px) {
-    width: 95%;
+    width: 100%;
     height: 175px;
   }
 `
@@ -66,11 +64,9 @@ export const ContainerWrapper = styled.div`
   align-items: center;
   margin-top: 114rem;
 
-
-
   @media screen and (max-width: 700px) {
-    margin-top: -10rem;
-    width: 100vw;
+    margin-top: 75rem;
+    width: 100%;
   }
 `
 
@@ -83,7 +79,6 @@ export const AutorContainer = styled.div`
   margin-top: 35px;
   margin-bottom: 5px;
   width: 100%;
-
 
   @media screen and (max-width: 700px) {
     margin-top: 18px;
@@ -135,12 +130,10 @@ export const LikeContainer = styled.div`
   align-items: center;
   margin-right: 85px;
   /* background: orange; */
-  
 
   @media screen and (max-width: 470px) {
-    margin-right: -15px;
+    margin-right: -13px;
   }
-
 
   @media screen and (min-width: 470px) and (max-width: 700px) {
     margin-right: -155px;
@@ -167,20 +160,21 @@ export const ProfileButton = styled.button`
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 12px ;
+  font-size: 12px;
   border: none;
   border-radius: 12px;
   margin-left: 38px;
   cursor: pointer;
   transition: ease 0.8s;
+  font-weight: bolder;
 
-  :hover{
+  :hover {
     background: #80bfff;
     color: #404040;
   }
 
-
   @media screen and (max-width: 670px) {
-    margin-top: 15px;
+    margin-top: 20px;
+    margin-left: 30px;
   }
 `
