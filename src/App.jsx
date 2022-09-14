@@ -20,10 +20,17 @@ import {
 } from './style'
 import { useEffect, useState } from 'react'
 import { AiFillLike } from 'react-icons/ai'
+import { AuthContext } from './Auth/AuthContext'
+import { useContext } from 'react'
+import { useHistory } from 'react-router-dom'
 
 function App() {
   const [post, setPosts] = useState([])
   const [buttonAbled, setButtonAbled] = useState(false)
+
+  const { setpostId, postId } = useContext(AuthContext)
+
+  const history = useHistory()
 
   function getDateWithoutTime(date) {
     return moment(date).format('DD-MM-YYYY')
@@ -36,10 +43,16 @@ function App() {
     setButtonAbled(true)
   }
 
-  async function getLikes(id) {
-    const { likes } = await api.get(`/get-likes/${id}`)
+  async function handleProfile(id) {
+    // const { data } = await api.get(`/profile/${postId}`)
 
-    return likes
+
+    setpostId(id)
+
+    localStorage.setItem('PostId', id)
+
+    history.push('/profile')
+
   }
 
   async function handlePosts() {
@@ -199,8 +212,12 @@ function App() {
                     </div>
 
                     <ContainerParagraph>
-                      <Span>TEXTO: {item.text}</Span>
+                      <Span>TEXTO: {item.description}</Span>
                     </ContainerParagraph>
+
+                    <button onClick={() => handleProfile(item.id)}>
+                      PROFILE
+                    </button>
                   </div>
                 )
               })}
