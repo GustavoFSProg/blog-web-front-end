@@ -6,16 +6,13 @@ export const ContainerApp = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-    margin-top: 3rem;
+    margin-top: -8rem;
 
   /* margin-top: -26.5rem; */
 
   @media screen and (max-width: 800px) {
-    /* margin-top: -34.4rem; */
-    margin-top: 1rem;
-    /* margin-left: 7px; */
     height: auto;
-    width: 100%;
+    width: 93%;
   }
 `
 export const ImgBody = styled.img`
@@ -29,7 +26,7 @@ export const ImgBody = styled.img`
   justify-content: center;
 
   @media screen and (max-width: 800px) {
-    width: 95%;
+    width: 100%;
     height: 175px;
   }
 `
@@ -64,10 +61,10 @@ export const ContainerWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: -9rem;
+  margin-top: 1rem;
 
   @media screen and (max-width: 700px) {
-    margin-top: 107rem;
+    margin-top: 10rem;
     width: 100vw;
   }
 `
@@ -152,5 +149,30 @@ export const ContainerFace = styled.div`
 
   @media screen and (max-width: 670px) {
     margin-left: -15px;
+  }
+`
+export const ProfileButton = styled.button`
+  display: flex;
+  width: 5rem;
+  height: 2rem;
+  background: #339cff;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px ;
+  border: none;
+  border-radius: 12px;
+  margin-left: 38px;
+  cursor: pointer;
+  transition: ease 0.8s;
+
+  :hover{
+    background: #80bfff;
+    color: #404040;
+  }
+
+
+  @media screen and (max-width: 670px) {
+    margin-top: 15px;
   }
 `

@@ -8,14 +8,13 @@ export const ContainerApp = styled.div`
   justify-content: center;
     margin-top: 3rem;
 
-  /* margin-top: -26.5rem; */
 
   @media screen and (max-width: 800px) {
     /* margin-top: -34.4rem; */
     margin-top: 1rem;
     /* margin-left: 7px; */
     height: auto;
-    width: 100%;
+    width: 93%;
   }
 `
 export const ImgBody = styled.img`
@@ -27,6 +26,7 @@ export const ImgBody = styled.img`
   display: flex;
   border-radius: 9px;
   justify-content: center;
+
 
   @media screen and (max-width: 800px) {
     width: 95%;
@@ -66,6 +66,8 @@ export const ContainerWrapper = styled.div`
   align-items: center;
   margin-top: 114rem;
 
+
+
   @media screen and (max-width: 700px) {
     margin-top: 107rem;
     width: 100vw;
@@ -81,6 +83,8 @@ export const AutorContainer = styled.div`
   margin-top: 35px;
   margin-bottom: 5px;
   width: 100%;
+
+
   @media screen and (max-width: 700px) {
     margin-top: 18px;
     margin-left: 57px;
@@ -131,6 +135,7 @@ export const LikeContainer = styled.div`
   align-items: center;
   margin-right: 85px;
   /* background: orange; */
+  
 
   @media screen and (max-width: 470px) {
     margin-right: -15px;
