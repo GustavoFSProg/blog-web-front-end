@@ -12,7 +12,7 @@ export const ContainerApp = styled.div`
 
   @media screen and (max-width: 800px) {
     height: auto;
-    width: 93%;
+    width: 100%;
   }
 `
 export const ImgBody = styled.img`
@@ -64,7 +64,7 @@ export const ContainerWrapper = styled.div`
   margin-top: 1rem;
 
   @media screen and (max-width: 700px) {
-    margin-top: 10rem;
+    margin-top: -10rem;
     width: 100vw;
   }
 `
