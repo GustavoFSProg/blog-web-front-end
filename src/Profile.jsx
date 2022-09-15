@@ -38,7 +38,6 @@ function Profile() {
     setButtonAbled(true)
 
 
-    // setButtonAbled(true)
   }
 
   async function handlePostsProfile() {
@@ -63,7 +62,6 @@ function Profile() {
         style={{
           width: '98.8vw',
           height: '100vh',
-          // background: '#f2f2f2',
           display: 'flex',
           justifyContent: 'space-around',
           alignItems: 'center',
@@ -201,7 +199,7 @@ function Profile() {
                 </div>
 
                 <ContainerParagraph>
-                  <Span>TEXTO: {post.description}</Span>
+                  <Span> {post.description}</Span>
                 </ContainerParagraph>
               </div>
             </div>

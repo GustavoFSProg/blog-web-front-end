@@ -198,7 +198,7 @@ function App() {
                     </div>
 
                     <ContainerParagraph>
-                      <Span>TEXTO: {item.description}</Span>
+                      <Span> {item.description}</Span>
                     </ContainerParagraph>
 
                     <ProfileButton onClick={() => handleProfile(item.id)}>POST</ProfileButton>
