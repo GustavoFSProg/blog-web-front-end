@@ -6,12 +6,11 @@ export const ContainerApp = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 3rem;
+    margin-top: -8rem;
+
+  /* margin-top: -26.5rem; */
 
   @media screen and (max-width: 800px) {
-    /* margin-top: -34.4rem; */
-    margin-top: 1rem;
-    /* margin-left: 7px; */
     height: auto;
     width: 100%;
   }
@@ -27,7 +26,7 @@ export const ImgBody = styled.img`
   justify-content: center;
 
   @media screen and (max-width: 800px) {
-    width: 100%;
+    width: 96%;
     height: 175px;
   }
 `
@@ -62,13 +61,15 @@ export const ContainerWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 114rem;
+  margin-top: 1rem;
 
   @media screen and (max-width: 700px) {
-    margin-top: 87rem;
+       margin-top: 5rem;
+
     width: 100%;
   }
 `
+
 export const ContainImageBody = styled.div`
   width: 80%;
   display: flex;
@@ -81,8 +82,8 @@ export const ContainImageBody = styled.div`
    
     width: 79%;
   }
+  `
 
-`
 
 export const AutorContainer = styled.div`
   display: flex;
@@ -93,7 +94,6 @@ export const AutorContainer = styled.div`
   margin-top: 35px;
   margin-bottom: 5px;
   width: 100%;
-
   @media screen and (max-width: 700px) {
     margin-top: 18px;
     margin-left: 57px;
@@ -149,6 +149,7 @@ export const LikeContainer = styled.div`
     margin-right: -13px;
   }
 
+
   @media screen and (min-width: 470px) and (max-width: 700px) {
     margin-right: -155px;
   }
@@ -174,21 +175,20 @@ export const ProfileButton = styled.button`
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 12px;
+  font-size: 12px ;
   border: none;
   border-radius: 12px;
   margin-left: 38px;
   cursor: pointer;
   transition: ease 0.8s;
-  font-weight: bolder;
 
-  :hover {
+  :hover{
     background: #80bfff;
     color: #404040;
   }
 
+
   @media screen and (max-width: 670px) {
-    margin-top: 20px;
-    margin-left: 30px;
+    margin-top: 15px;
   }
 `

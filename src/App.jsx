@@ -17,13 +17,22 @@ import {
   AutorContainer,
   LikeContainer,
   ContainerFace,
+  ProfileButton,
+  ContainImageBody,
 } from './style'
 import { useEffect, useState } from 'react'
 import { AiFillLike } from 'react-icons/ai'
+import { AuthContext } from './Auth/AuthContext'
+import { useContext } from 'react'
+import { useHistory } from 'react-router-dom'
 
 function App() {
   const [post, setPosts] = useState([])
   const [buttonAbled, setButtonAbled] = useState(false)
+
+  const { setpostId, postId } = useContext(AuthContext)
+
+  const history = useHistory()
 
   function getDateWithoutTime(date) {
     return moment(date).format('DD-MM-YYYY')
@@ -36,10 +45,14 @@ function App() {
     setButtonAbled(true)
   }
 
-  async function getLikes(id) {
-    const { likes } = await api.get(`/get-likes/${id}`)
+  async function handleProfile(id) {
+    // const { data } = await api.get(`/profile/${postId}`)
 
-    return likes
+    // setpostId(id)
+
+    localStorage.setItem('PostId', id)
+
+    history.push('/profile')
   }
 
   async function handlePosts() {
@@ -57,7 +70,7 @@ function App() {
 
       <div
         style={{
-          width: '98.8vw',
+          width: '98.8%',
           height: '100vh',
           // background: '#f2f2f2',
           display: 'flex',
@@ -68,7 +81,7 @@ function App() {
       >
         <div
           style={{
-            width: '98.8vw',
+            width: '98.8%',
             height: '100%',
             background: '#f2f2f2',
 
@@ -83,21 +96,7 @@ function App() {
           </div>
 
           <ContainerWrapper>
-            <div
-              style={{
-                // background: 'blue',
-
-                display: 'flex',
-                // justifyContent: 'top',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-
-                // alignItems: 'flex-start',
-
-                // marginLeft: '13px'
-              }}
-            >
+            <ContainImageBody>
               {post.map((item) => {
                 return (
                   <div
@@ -109,9 +108,9 @@ function App() {
                       flexDirection: 'column',
                       alignItems: 'flex-start',
                       marginBottom: '60px',
-                      width: '100%',
+                      // width: '100%',
+                      width: '126%',
 
-                      // marginLeft: '13px'
                     }}
                     key={item.id}
                   >
@@ -199,12 +198,14 @@ function App() {
                     </div>
 
                     <ContainerParagraph>
-                      <Span>TEXTO: {item.text}</Span>
+                      <Span>TEXTO: {item.description}</Span>
                     </ContainerParagraph>
+
+                    <ProfileButton onClick={() => handleProfile(item.id)}>POST</ProfileButton>
                   </div>
                 )
               })}
-            </div>
+            </ContainImageBody>
           </ContainerWrapper>
 
           <div>

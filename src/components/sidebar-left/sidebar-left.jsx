@@ -13,13 +13,10 @@ import { FcBinoculars } from 'react-icons/fc'
 import { useHistory } from 'react-router-dom'
 
 function SidebarLeft() {
-
   const history = useHistory()
 
   function buttonLogin() {
-
     history.push('/login')
-
   }
 
   return (
