@@ -67,7 +67,7 @@ export const ContainerWrapper = styled.div`
   margin-top: 1rem;
 
   @media screen and (max-width: 700px) {
-       margin-top: 5rem;
+       margin-top: 7rem;
 
     width: 100%;
   }
