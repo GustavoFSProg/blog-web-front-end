@@ -48,7 +48,7 @@ export const H1 = styled.h1`
   justify-content: center;
 
   @media screen and (max-width: 800px) {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-left: -26px;
   }
 `
@@ -64,7 +64,7 @@ export const ContainerWrapper = styled.div`
   margin-top: 1rem;
 
   @media screen and (max-width: 700px) {
-       margin-top: 8.5rem;
+       margin-top: 9rem;
 
     width: 100%;
   }
