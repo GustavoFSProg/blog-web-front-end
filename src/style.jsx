@@ -49,7 +49,8 @@ export const H1 = styled.h1`
   justify-content: center;
 
   @media screen and (max-width: 800px) {
-    font-size: 1.1rem;
+        font-size: 1.8rem;
+
     margin-left: -26px;
   }
 `
@@ -62,7 +63,7 @@ export const ContainerWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 114rem;
+  margin-top: 134rem;
 
   @media screen and (max-width: 700px) {
     margin-top: 87rem;
@@ -80,6 +81,7 @@ export const ContainImageBody = styled.div`
   @media screen and (max-width: 700px) {
    
     width: 79%;
+    /* width: 100%; */
   }
 
 `
@@ -177,7 +179,8 @@ export const ProfileButton = styled.button`
   font-size: 12px;
   border: none;
   border-radius: 12px;
-  margin-left: 38px;
+  margin-left: 50px;
+  margin-top: 38px;
   cursor: pointer;
   transition: ease 0.8s;
   font-weight: bolder;

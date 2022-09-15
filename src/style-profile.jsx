@@ -43,13 +43,16 @@ export const ImgFace = styled.img`
 export const H1 = styled.h1`
   font-size: 2rem;
   margin-top: 23px;
+  margin-bottom: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
 
   @media screen and (max-width: 800px) {
-    font-size: 1.1rem;
-    margin-left: -26px;
+    font-size: 1.8rem;
+    margin-left: -27px;
+  margin-bottom: 40px;
+
   }
 `
 

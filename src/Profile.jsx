@@ -63,7 +63,6 @@ function Profile() {
         style={{
           width: '98.8vw',
           height: '100vh',
-          // background: '#f2f2f2',
           display: 'flex',
           justifyContent: 'space-around',
           alignItems: 'center',
@@ -89,18 +88,14 @@ function Profile() {
           <ContainerWrapper>
             <div
               style={{
-                // background: 'blue',
 
                 display: 'flex',
-                // justifyContent: 'top',
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
                 width: '100%',
 
-                // alignItems: 'flex-start',
 
-                // marginLeft: '13px'
               }}
             >
               <div
@@ -201,7 +196,7 @@ function Profile() {
                 </div>
 
                 <ContainerParagraph>
-                  <Span>TEXTO: {post.description}</Span>
+                  <Span>TEXTO: {post.text}</Span>
                 </ContainerParagraph>
               </div>
             </div>
