@@ -62,10 +62,10 @@ export const ContainerWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 114rem;
+  margin-top: 118rem;
 
   @media screen and (max-width: 700px) {
-    margin-top: 110rem;
+    margin-top: 118rem;
     width: 100%;
   }
 `
