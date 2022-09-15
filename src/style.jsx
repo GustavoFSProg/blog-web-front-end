@@ -177,10 +177,12 @@ export const ProfileButton = styled.button`
   font-size: 12px;
   border: none;
   border-radius: 12px;
-  margin-left: 38px;
+  margin-left: 48px;
   cursor: pointer;
   transition: ease 0.8s;
   font-weight: bolder;
+    margin-top: 25px;
+
 
   :hover {
     background: #80bfff;
