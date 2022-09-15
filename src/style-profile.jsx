@@ -48,7 +48,7 @@ export const H1 = styled.h1`
   justify-content: center;
 
   @media screen and (max-width: 800px) {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     margin-left: -26px;
   }
 `
