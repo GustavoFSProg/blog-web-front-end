@@ -25,7 +25,7 @@ function Login() {
     try {
       const dataes = { email, password }
 
-      const { data } = await api.post(`login`, dataes)
+      const { data } = await api.post(`/login`, dataes)
 
 
       localStorage.setItem('Token', data)

@@ -41,7 +41,7 @@ function Profile() {
   async function handlePostsProfile() {
     const PostId = localStorage.getItem('PostId')
 
-    const { data } = await api.get(`profile/${PostId}`)
+    const { data } = await api.get(`/profile/${PostId}`)
 
     setPosts(data)
   }

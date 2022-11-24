@@ -56,7 +56,7 @@ function App() {
   }
 
   async function handlePosts() {
-    const { data } = await api.get(`all`)
+    const { data } = await api.get(`/all`)
 
     setPosts(data)
   }
