@@ -36,14 +36,12 @@ function Profile() {
     await api.put(`/likes/${id}`)
     handlePostsProfile()
     setButtonAbled(true)
-
-
   }
 
   async function handlePostsProfile() {
     const PostId = localStorage.getItem('PostId')
 
-    const { data } = await api.get(`/profile/${PostId}`)
+    const { data } = await api.get(`profile/${PostId}`)
 
     setPosts(data)
   }
@@ -87,8 +85,6 @@ function Profile() {
           <ContainerWrapper>
             <div
               style={{
-                // background: 'blue',
-
                 display: 'flex',
                 // justifyContent: 'top',
                 flexDirection: 'column',

@@ -43,15 +43,7 @@ function Register() {
 
       // await api.post('/register', data)
 
-      await api({
-        method: 'POST',
-        data: data,
-        url: '/register',
-        headers: {
-          'Content-type': 'multipart/form-data',
-          token: token,
-        },
-      })
+      await api.post('register', data)
 
       history.push('/')
 
